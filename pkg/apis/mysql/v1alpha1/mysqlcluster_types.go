@@ -142,6 +142,12 @@ type PodSpec struct {
 	PriorityClassName  string                    `json:"priorityClassName,omitempty"`
 	Tolerations        []core.Toleration         `json:"tolerations,omitempty"`
 	ServiceAccountName string                    `json:"serviceAccountName,omitempty"`
+	Exporter           ExporterSpec              `json:"exporterSpec,omitempty"`
+}
+
+type ExporterSpec struct {
+	Resources core.ResourceRequirements `json:"resources,omitempty"`
+	Args      []string                  `json:"args,omitempty"`
 }
 
 // VolumeSpec is the desired spec for storing mysql data. Only one of its

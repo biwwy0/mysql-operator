@@ -106,6 +106,15 @@ spec:
                   type: object
                 annotations:
                   type: object
+                exporterSpec:
+                  properties:
+                    args:
+                      items:
+                        type: string
+                      type: array
+                    resources:
+                      type: object
+                  type: object
                 imagePullPolicy:
                   type: string
                 imagePullSecrets:

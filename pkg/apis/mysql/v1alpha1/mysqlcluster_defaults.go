@@ -26,9 +26,11 @@ const (
 )
 
 var (
-	resourceStorage       = resource.MustParse("1Gi")
-	resourceRequestCPU    = resource.MustParse("200m")
-	resourceRequestMemory = resource.MustParse("1Gi")
+	resourceStorage               = resource.MustParse("1Gi")
+	resourceRequestCPU            = resource.MustParse("200m")
+	resourceRequestMemory         = resource.MustParse("1Gi")
+	resourceExporterRequestCPU    = resource.MustParse("200m")
+	resourceExporterRequestMemory = resource.MustParse("200m")
 )
 
 var (
