@@ -340,7 +340,7 @@ func (s *sfsSyncer) ensureContainersSpec() []core.Container {
 			fmt.Sprintf("--web.telemetry-path=%s", ExporterPath),
 			"--collect.heartbeat",
 			fmt.Sprintf("--collect.heartbeat.database=%s", constants.OperatorDbName),
-			strings.Join(s.cluster.Spec.PodSpec.Exporter.Args, ""),
+			strings.Join(s.cluster.Spec.PodSpec.Exporter.Args, "\n"),
 		},
 	)
 	exporter.Ports = ensurePorts(core.ContainerPort{
