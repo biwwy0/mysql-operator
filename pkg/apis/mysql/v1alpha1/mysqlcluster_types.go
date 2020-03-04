@@ -142,7 +142,7 @@ type PodSpec struct {
 	PriorityClassName  string                    `json:"priorityClassName,omitempty"`
 	Tolerations        []core.Toleration         `json:"tolerations,omitempty"`
 	ServiceAccountName string                    `json:"serviceAccountName,omitempty"`
-	Exporter           ExporterSpec              `json:"exporterSpec,omitempty"`
+	Exporter           ExporterSpec              `json:"exporter,omitempty"`
 }
 
 type ExporterSpec struct {
