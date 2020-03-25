@@ -44,6 +44,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
  * Change logging: change `cluster` logging field to `key`; normalize logging and more details;
    output Stackdrive compatible format.
  * Decrease `MASTER_CONNECT_RETRY` interval from 10 to 1 second.
+ * Change requested resources for sidecar containers: `sidecar`: (requested=10m/32Mi,
+   limit=`.spec.podSpec.rsources.limit`); `exporter`: (requested=10m/32Mi. limit=100m/128Mi);
+   `heartbeat`: (requested=10m/32Mi, limit=100m/64Mi)
 ### Removed
 ### Fixed
  * Update and fix e2e tests
